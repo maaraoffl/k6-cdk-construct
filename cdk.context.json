@@ -1,0 +1,68 @@
+{
+  "vpc-provider:account=514551510561:filter.vpc-id=vpc-234ed648:region=us-east-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-234ed648",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-347fff5f",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "us-east-2a",
+            "routeTableId": "rtb-e6bf9e8d"
+          },
+          {
+            "subnetId": "subnet-345da349",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "us-east-2b",
+            "routeTableId": "rtb-e6bf9e8d"
+          },
+          {
+            "subnetId": "subnet-b52405f9",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "us-east-2c",
+            "routeTableId": "rtb-e6bf9e8d"
+          }
+        ]
+      }
+    ]
+  },
+  "vpc-provider:account=514551510561:filter.isDefault=true:region=us-east-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-234ed648",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-347fff5f",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "us-east-2a",
+            "routeTableId": "rtb-e6bf9e8d"
+          },
+          {
+            "subnetId": "subnet-345da349",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "us-east-2b",
+            "routeTableId": "rtb-e6bf9e8d"
+          },
+          {
+            "subnetId": "subnet-b52405f9",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "us-east-2c",
+            "routeTableId": "rtb-e6bf9e8d"
+          }
+        ]
+      }
+    ]
+  },
+  "security-group:account=514551510561:region=us-east-2:securityGroupId=sg-0b978b2eaf130e960": {
+    "securityGroupId": "sg-0b978b2eaf130e960",
+    "allowAllOutbound": false
+  }
+}
