@@ -10,14 +10,14 @@ import java.io.IOException;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class K3InfraTest {
+public class K6InfraTest {
     private final static ObjectMapper JSON =
         new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true);
 
     @Test
     public void testStack() throws IOException {
         App app = new App();
-        K3InfraStack stack = new K3InfraStack(app, "test");
+        K6InfraStack stack = new K6InfraStack(app, "test");
 
         // synthesize the stack to a CloudFormation template
         JsonNode actual = JSON.valueToTree(app.synth().getStackArtifact(stack.getArtifactId()).getTemplate());

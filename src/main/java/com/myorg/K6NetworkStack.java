@@ -9,16 +9,16 @@ import software.amazon.awscdk.services.ec2.Port;
 import software.amazon.awscdk.services.ec2.SecurityGroup;
 import software.amazon.awscdk.services.ec2.Vpc;
 import software.amazon.awscdk.services.ec2.VpcLookupOptions;
-public class K3NetworkStack extends Stack{
-	public K3NetworkStack(final Construct scope, final String id){
+public class K6NetworkStack extends Stack{
+	public K6NetworkStack(final Construct scope, final String id){
 		this(scope, id, null);
 	}
 
-	public K3NetworkStack(final Construct scope, final String id, final StackProps props){
+	public K6NetworkStack(final Construct scope, final String id, final StackProps props){
 		super(scope, id, props);
-		SecurityGroup k3SecurityGroup = SecurityGroup.Builder.create(this, "K3SecurityGroup")
+		SecurityGroup k6SecurityGroup = SecurityGroup.Builder.create(this, "K3SecurityGroup")
 		.allowAllOutbound(true)
-		.securityGroupName("K3SecurityGroup")
+		.securityGroupName("K6SecurityGroup")
 		.description("Security group for k3")
 		.vpc(
 			Vpc.fromLookup(
@@ -28,7 +28,7 @@ public class K3NetworkStack extends Stack{
 			)
 		)
 		.build();
-		k3SecurityGroup.addIngressRule(Peer.anyIpv4(),Port.allTraffic());
-		k3SecurityGroup.addIngressRule(Peer.anyIpv6(),Port.allTraffic());
+		k6SecurityGroup.addIngressRule(Peer.anyIpv4(),Port.allTraffic());
+		k6SecurityGroup.addIngressRule(Peer.anyIpv6(),Port.allTraffic());
 	}
 }
